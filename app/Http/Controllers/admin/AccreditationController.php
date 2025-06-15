@@ -19,7 +19,8 @@ class AccreditationController extends Controller
     use imageUploader;
     /**
      * Display a listing of the resource.
-     *
+     * 
+
      * @return \Illuminate\Http\Response
      */
     public function index()

@@ -432,6 +432,10 @@ class ComposerStaticInitfaab13c1111927572c6ceb1a943ebe15
             array (
                 0 => __DIR__ . '/..' . '/mockery/mockery/library',
             ),
+            'Milon\\Barcode' => 
+            array (
+                0 => __DIR__ . '/..' . '/milon/barcode/src',
+            ),
         ),
         'H' => 
         array (
@@ -465,6 +469,7 @@ class ComposerStaticInitfaab13c1111927572c6ceb1a943ebe15
         'App\\Http\\Controllers\\admin\\TagController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/TagController.php',
         'App\\Http\\Controllers\\admin\\TeamController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/TeamController.php',
         'App\\Http\\Controllers\\admin\\TrainingController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/TrainingController.php',
+        'App\\Http\\Controllers\\admin\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/VerificationController.php',
         'App\\Http\\Controllers\\admin\\adminController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/adminController.php',
         'App\\Http\\Controllers\\admin\\partnerController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/partnerController.php',
         'App\\Http\\Controllers\\admin\\serviceController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/serviceController.php',
@@ -497,6 +502,7 @@ class ComposerStaticInitfaab13c1111927572c6ceb1a943ebe15
         'App\\Model\\Team' => __DIR__ . '/../..' . '/app/Model/Team.php',
         'App\\Model\\TrainingUser' => __DIR__ . '/../..' . '/app/Model/TrainingUser.php',
         'App\\Model\\Trainning' => __DIR__ . '/../..' . '/app/Model/Trainning.php',
+        'App\\Model\\Verification' => __DIR__ . '/../..' . '/app/Model/Verification.php',
         'App\\Model\\setting' => __DIR__ . '/../..' . '/app/Model/setting.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
@@ -505,6 +511,7 @@ class ComposerStaticInitfaab13c1111927572c6ceb1a943ebe15
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\Traits\\imageUploader' => __DIR__ . '/../..' . '/app/Traits/imageUploader.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'App\\Verification' => __DIR__ . '/../..' . '/app/Verification.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonConverterInterface' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonConverterInterface.php',
@@ -2563,6 +2570,15 @@ class ComposerStaticInitfaab13c1111927572c6ceb1a943ebe15
         'League\\MimeTypeDetection\\FinfoMimeTypeDetector' => __DIR__ . '/..' . '/league/mime-type-detection/src/FinfoMimeTypeDetector.php',
         'League\\MimeTypeDetection\\GeneratedExtensionToMimeTypeMap' => __DIR__ . '/..' . '/league/mime-type-detection/src/GeneratedExtensionToMimeTypeMap.php',
         'League\\MimeTypeDetection\\MimeTypeDetector' => __DIR__ . '/..' . '/league/mime-type-detection/src/MimeTypeDetector.php',
+        'Milon\\Barcode\\BarcodeServiceProvider' => __DIR__ . '/..' . '/milon/barcode/src/Milon/Barcode/BarcodeServiceProvider.php',
+        'Milon\\Barcode\\DNS1D' => __DIR__ . '/..' . '/milon/barcode/src/Milon/Barcode/DNS1D.php',
+        'Milon\\Barcode\\DNS2D' => __DIR__ . '/..' . '/milon/barcode/src/Milon/Barcode/DNS2D.php',
+        'Milon\\Barcode\\Datamatrix' => __DIR__ . '/..' . '/milon/barcode/src/Milon/Barcode/Datamatrix.php',
+        'Milon\\Barcode\\Facades\\DNS1DFacade' => __DIR__ . '/..' . '/milon/barcode/src/Milon/Barcode/Facades/DNS1DFacade.php',
+        'Milon\\Barcode\\Facades\\DNS2DFacade' => __DIR__ . '/..' . '/milon/barcode/src/Milon/Barcode/Facades/DNS2DFacade.php',
+        'Milon\\Barcode\\PDF417' => __DIR__ . '/..' . '/milon/barcode/src/Milon/Barcode/PDF417.php',
+        'Milon\\Barcode\\QRcode' => __DIR__ . '/..' . '/milon/barcode/src/Milon/Barcode/QRcode.php',
+        'Milon\\Barcode\\WrongCheckDigitException' => __DIR__ . '/..' . '/milon/barcode/src/Milon/Barcode/WrongCheckDigitException.php',
         'Mockery' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegration' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegration.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegrationAssertPostConditions' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegrationAssertPostConditions.php',

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\VerificationController;
 
 Route::group(['prefix'=>'admin','namespace'=>'admin','middleware'=>'auth:admin'] ,function (){
 
@@ -51,7 +52,14 @@ Route::group(['prefix'=>'admin','namespace'=>'admin','middleware'=>'auth:admin']
 
 
     Route::get('logout','adminController@Logout')->name('Logout');
+  
+    Route::resource('verifications','VerificationController');
+    Route::get('verifications/{id}/pdf', 'VerificationController@downloadPDF')->name('verifications.pdf');
 
+        // Route::get('/verify', [VerificationController::class, 'index'])->name('verification.index');
+        // Route::post('/verify/search', [VerificationController::class, 'search'])->name('verification.search');
+        // Route::get('/verify/create', [VerificationController::class, 'create'])->name('verification.create');
+        // Route::post('/verify/store', [VerificationController::class, 'store'])->name('verification.store');
 });
 
 

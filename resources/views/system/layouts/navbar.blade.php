@@ -133,6 +133,15 @@
                                 </span>
                                 <span class="menu-text">Certifications</span></a>
                         </li>
+                        <li class="menu-item {{ request()->is('admin/verify*') ? 'menu-item-active' : '' }}" aria-haspopup="true">
+                            <a href="{{ route('verifications.index') }}" class="menu-link">
+                                <span class="svg-icon menu-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </span>
+                                <span class="menu-text">Certifications Verify</span>
+                            </a>
+                        </li>
+
                         <li class="menu-item  menu-item{{url()->current() ==url('admin/certification/request') ?'-active' :''}}" aria-haspopup="true">
                             <a href="{{url('admin/certification/request')}}" class="menu-link ">
                                 <span class="svg-icon menu-icon">
