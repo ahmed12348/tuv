@@ -18,6 +18,12 @@ Route::post('join/training','siteController@joinTraining')->name('join.training'
 Route::get('certifications','siteController@certifications');
 Route::get('/certifications/{id}','siteController@single_certification')->name('single_certification');
 Route::get('certification','siteController@certification')->name('certificate');
+Route::view('/verification', 'frontend.verification'); // to load the page
+Route::get('/verify/{cert_number?}','siteController@frontendShow')->name('verify.cert');
+
+Route::get('/verification/search','siteController@frontSearch')->name('verifications.front.search');
+
+
 Route::post('join/certificate','siteController@save_request_certification')->name('join.request.certificate');
 Route::get('services','siteController@show_all_services');
 Route::get('services/{id}','siteController@single_service');

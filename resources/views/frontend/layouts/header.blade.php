@@ -209,7 +209,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link {{url()->current() == url('/certificate-verification') ? 'active' : ''}}">Certificate Verification</a>
+                                <a href="{{url('verification')}}" class="nav-link {{url()->current() == url('/certificate-verification') ? 'active' : ''}}">Certificate Verification</a>
                             </li>
 
                             <!-- Our Terms with dropdown -->

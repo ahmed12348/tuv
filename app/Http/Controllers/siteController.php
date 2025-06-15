@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\Traits\imageUploader;
 use App\Model\Subscribe;
+use App\Model\Verification;
 use App\User;
 
 class SiteController extends Controller
@@ -98,6 +99,34 @@ class SiteController extends Controller
         return response(['certification'=>$certificate]);
 
     }
+    public function frontendShow($cert_number = null)
+    {
+        return view('frontend.verification', compact('cert_number'));
+    }
+
+    public function frontSearch(Request $request)
+    {
+        $certNumber = $request->input('cert_number');
+
+        $verification = Verification::where('certification_number', $certNumber)->first();
+
+        if ($verification) {
+            return response()->json([
+                'verification' => [
+                    'certification_name' => $verification->certification_name,
+                    'certification_number' => $verification->certification_number,
+                    'organization_name' => $verification->organization_name,
+                    'stander' => $verification->stander,
+                    'initial_date' => \Carbon\Carbon::parse($verification->initial_date)->format('Y-m-d'),
+                    'issue_date' => \Carbon\Carbon::parse($verification->issue_date)->format('Y-m-d'),
+                    'end_date' => \Carbon\Carbon::parse($verification->end_date)->format('Y-m-d'),
+                ]
+            ]);
+        }
+
+        return response()->json(['verification' => null]);
+    }
+
 
     public function save_request_certification(Request  $request){
         $validator=Validator::make($request->all(),[

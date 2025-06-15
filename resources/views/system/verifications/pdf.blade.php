@@ -40,6 +40,11 @@
         .barcode img {
             margin-top: 10px;
         }
+        .barcode-link {
+            font-size: 12px;
+            color: #555;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -59,11 +64,32 @@
         <p><span class="label">End Date:</span> {{ \Carbon\Carbon::parse($verification->end_date)->format('F d, Y') }}</p>
     </div>
 
-    <div class="barcode">
-        <p><strong>Scan to Verify:</strong></p>
-        <img src="data:image/png;base64,{{ DNS1D::getBarcodePNG($verification->certification_number, 'C128') }}" alt="Barcode" />
-        <p style="font-size: 12px; color: #555;">{{ $verification->certification_number }}</p>
-    </div>
+<div class="barcode">
+    <p><strong>Scan to Verify:</strong></p>
+    @php
+        try {
+            $url = url('verify/' . $verification->certification_number);
+            $barcode = DNS1D::getBarcodePNG($url, 'C128');
+
+        } catch (\Exception $e) {
+            $barcode = null;
+        }
+    @endphp
+
+    @if($barcode)
+        <img src="data:image/png;base64,{{ $barcode }}" alt="Barcode" />
+        
+
+    @else
+        <p style="color: red;">Barcode generation failed.</p>
+    @endif
+
+    {{-- <p class="barcode-link">
+        {{-- {{ $verification->certification_number }}<br> --}}
+        {{-- {{ url('verify/' . $verification->certification_number) }} --}}
+    {{-- </p>  --}}
+</div>
+
 
 </body>
 </html>
