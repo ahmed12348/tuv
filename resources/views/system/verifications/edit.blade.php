@@ -46,6 +46,26 @@
                         </div>
 
                         <div class="form-group">
+                            <label>Company Name *</label>
+                            <input type="text" name="company_name" class="form-control" value="{{ $verification->company_name }}" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Company Address *</label>
+                            <input type="text" name="company_address" class="form-control" value="{{ $verification->company_address }}" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Certification Type (e.g., ISO 9001:2015) *</label>
+                            <input type="text" name="certification_type" class="form-control" value="{{ $verification->certification_type }}" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Certification Scope *</label>
+                            <textarea name="certification_scope" rows="4" class="form-control" required>{{ $verification->certification_scope }}</textarea>
+                        </div>
+
+                        <div class="form-group">
                             <label>Stander (optional)</label>
                             <input type="number" name="stander" class="form-control" value="{{ $verification->stander }}">
                         </div>
@@ -73,6 +93,7 @@
                     </div>
                 </div>
             </form>
+
         </div>
     </div>
 </div>
